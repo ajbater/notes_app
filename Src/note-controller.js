@@ -26,9 +26,11 @@
    NoteController.prototype.getNoteIdFromURL = function(){
     return window.location.hash.split("#")[1];
   };
-NoteController.prototype.findNoteFromNoteList = function(){
-  var idFromURL = parseInt(noteController.getNoteIdFromURL());
-  var singleNoteView = new SingleNoteView(noteList.noteList[0]);
-};
+
+  NoteController.prototype.findNoteFromNoteList = function(){
+    var idFromURL = parseInt(noteController.getNoteIdFromURL());
+    var singleNoteView = new SingleNoteView(noteList._notes[0]);
+  };
+
   exports.NoteController = NoteController;
 })(this);

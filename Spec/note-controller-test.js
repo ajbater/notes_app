@@ -16,7 +16,6 @@ function testInnerHtml(){
   noteController.getHtml();
   element = document.getElementById('app')
   assert.isTrue(element.innerHTML === "<ul><li><div>Favourite food: pesto</div></li></ul>", "testInnerHtml")
-
 };
 
 testNoteControllerCanBeInstantiated();

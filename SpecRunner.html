@@ -1,19 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+  <title>Test Framework</title>
+  
+  <!-- Test Library -->
+  <script src="spec/assert.js"></script>
+
+  <!-- Models -->
+  <script src="src/note-model.js"></script>
+  <script src="src/note-list-model.js"></script>
+  <script src="src/note-list-view.js"></script>
+  <script src="src/note-controller.js"></script>
+  <script src="src/single-note-view.js"></script>
+
+  <!-- Specs -->
+  <script src="spec/note-test.js"></script>
+  <script src="spec/note-list-test.js"></script>
+  <script src="spec/note-list-view-test.js"></script>
+  <script src="spec/note-controller-test.js"></script>
+  <script src="spec/single-note-view-test.js"></script>
+
 </head>
+
 <body>
-<div id="app">hello</div>
-<script src="src/note-model.js"></script>
-<script src="src/note-list-model.js"></script>
-<script src="src/note-list-view.js"></script>
-<script src="src/note-controller.js"></script>
-<script src="src/single-note-view.js"></script>
-<script src="spec/assert.js"></script>
-<script src="spec/note-test.js"></script>
-<script src="spec/note-list-test.js"></script>
-<script src="spec/note-list-view-test.js"></script>
-<script src="spec/note-controller-test.js"></script>
-<script src="spec/single-note-view-test.js"></script>
+  <div id="app">hello</div>
 </body>
 </html>
