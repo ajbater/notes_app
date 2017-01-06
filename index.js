@@ -2,6 +2,7 @@
 document.body.onLoad = addBrand();
 document.body.onLoad = addListTitle();
 document.body.onload = addApp();
+document.body.onload = addForm();
 
 function addBrand() {
  var brand = document.createElement("h1");
@@ -23,4 +24,22 @@ function addApp(){
   var app = document.createElement("div");
   app.setAttribute("id", "app");
   document.body.appendChild(app);
+};
+
+function addForm(){
+  var form = document.createElement("form");
+  form.setAttribute("method", "post");
+  form.setAttribute("action", "#note/new");
+  form.setAttribute("id", "text-form");
+  var textarea = document.createElement("textarea");
+  textarea.setAttribute("rows", "4");
+  textarea.setAttribute("cols", "50");
+  textarea.setAttribute("id", "textarea");
+  form.appendChild(textarea);
+  var submit = document.createElement("input");
+  submit.setAttribute("type", "submit");
+  submit.setAttribute("value", "Submit");
+  submit.setAttribute("id", "submit");
+  form.appendChild(submit);
+  document.body.appendChild(form);
 };
