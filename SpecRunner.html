@@ -3,7 +3,7 @@
 <head>
 
   <title>Test Framework</title>
-  
+
   <!-- Test Library -->
   <script src="spec/assert.js"></script>
 
@@ -15,15 +15,19 @@
   <script src="src/single-note-view.js"></script>
 
   <!-- Specs -->
+    <!-- Unit Tests -->
   <script src="spec/note-test.js"></script>
   <script src="spec/note-list-test.js"></script>
   <script src="spec/note-list-view-test.js"></script>
   <script src="spec/note-controller-test.js"></script>
   <script src="spec/single-note-view-test.js"></script>
 
+    <!-- Feature Tests -->
+
 </head>
 
 <body>
-  <div id="app">hello</div>
+  <script src="index.js"></script>
+  <script src="spec/features/loadAppSpec.js"></script>
 </body>
 </html>
