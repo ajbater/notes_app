@@ -40,6 +40,7 @@
       .getElementById("text-form")
       .addEventListener("submit", function(submitEvent){
         console.log(submitEvent)
+        console.log(submiteEvent.srcElement[0].value)
         submitEvent.preventDefault()
       });
   };
