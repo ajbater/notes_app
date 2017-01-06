@@ -1,7 +1,7 @@
 (function(exports) {
 
-  function NoteController(){
-    this.noteList = new NoteList();
+  function NoteController(noteList){
+    this.noteList = noteList;
     this.noteListView = new NoteListView(this.noteList);
   };
 
@@ -16,7 +16,7 @@
   };
 
   NoteController.prototype.makeNoteLinkShowFullNote = function () {
-    window.addEventListener("hashchange", findNoteFromNoteList);
+    window.addEventListener("hashchange", this.findNoteFromNoteList);
   };
 
   // NoteController.prototype.showNoteForCurrentPage = function () {
@@ -28,8 +28,9 @@
   };
 
   NoteController.prototype.findNoteFromNoteList = function(){
-    var idFromURL = parseInt(noteController.getNoteIdFromURL());
-    var singleNoteView = new SingleNoteView(noteList._notes[0]);
+    var idFromURL = noteController.getNoteIdFromURL();
+    var singleNoteView = new SingleNoteView(noteList._notes[idFromURL]);
+    console.log(singleNoteView);
   };
 
   exports.NoteController = NoteController;
