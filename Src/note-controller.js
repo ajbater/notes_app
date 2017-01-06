@@ -35,5 +35,14 @@
     return singleNoteView;
   };
 
+  NoteController.prototype.addSubmitListener = function(){
+    document
+      .getElementById("text-form")
+      .addEventListener("submit", function(submitEvent){
+        console.log(submitEvent)
+        submitEvent.preventDefault()
+      });
+  };
+
   exports.NoteController = NoteController;
 })(this);
