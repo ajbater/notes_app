@@ -16,12 +16,12 @@
   };
 
   NoteController.prototype.makeNoteLinkShowFullNote = function () {
-    window.addEventListener("hashchange", this.findNoteFromNoteList);
+    window.addEventListener("hashchange", this.showHtmlForSingleNote.bind (this));
   };
 
-  // NoteController.prototype.showNoteForCurrentPage = function () {
-  //   showNote(getNoteFromURL());
-  // };
+  NoteController.prototype.showHtmlForSingleNote = function(){
+    console.log(this.findNoteFromNoteList().returnSingleNoteHtml());
+  };
 
    NoteController.prototype.getNoteIdFromURL = function(){
     return window.location.hash.split("#")[1];
@@ -30,7 +30,7 @@
   NoteController.prototype.findNoteFromNoteList = function(){
     var idFromURL = noteController.getNoteIdFromURL();
     var singleNoteView = new SingleNoteView(noteList._notes[idFromURL]);
-    console.log(singleNoteView);
+    return singleNoteView;
   };
 
   exports.NoteController = NoteController;

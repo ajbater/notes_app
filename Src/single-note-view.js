@@ -6,5 +6,6 @@
 SingleNoteView.prototype.returnSingleNoteHtml = function() {
   return "<div>" + this.note.showNoteText() + "</div>";
 };
+
   exports.SingleNoteView = SingleNoteView;
 })(this);
