@@ -9,7 +9,7 @@
 
   NoteListView.prototype.returnsHtmlList = function() {
     var output = "<ul>";
-    this.noteListModel.noteList.forEach(function(note) {
+    this.noteListModel._notes.forEach(function(note) {
       output += "<li><a href='#" + note.id + "'><div>" + note.noteText.slice(0,20) + "</div></a></li>";
     })
     return output + "</ul>";
