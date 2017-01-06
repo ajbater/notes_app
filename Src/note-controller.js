@@ -20,7 +20,9 @@
   };
 
   NoteController.prototype.showHtmlForSingleNote = function(){
-    console.log(this.findNoteFromNoteList().returnSingleNoteHtml());
+    var note = this.findNoteFromNoteList().returnSingleNoteHtml();
+    html = document.getElementById("app");
+    html.innerHTML = note;
   };
 
    NoteController.prototype.getNoteIdFromURL = function(){
